@@ -21,7 +21,12 @@
 	--shadow-color-key--toggle-switch: hsl(6, 70%, 34%);
 
 	/* Rules Pattern */
+	--calc-screen-font-size: 2.5rem;
 	--font: "League Spartan", sans-serif;
+	--gap--regular: 15px;
+	--padding--btn: 0.75rem 0.5rem;
+	--padding--regular: 1.8rem;
+	--radius--regular: 5px;
 }
 
 body.theme-01 {
