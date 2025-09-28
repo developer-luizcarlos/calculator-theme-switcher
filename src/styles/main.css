@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url(variables.css);
 
 *,
@@ -16,6 +16,7 @@ html {
 }
 
 body {
+	background-color: var(--bg-body);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,4 +25,185 @@ body {
 
 html {
 	font-size: 16px;
+}
+
+.heading {
+	color: var(--color-key--other);
+}
+
+.heading--h3 {
+	font-size: 1.5rem;
+}
+
+.heading--h4 {
+	font-size: 0.8rem;
+}
+
+.heading--uppercase {
+	text-transform: uppercase;
+}
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	min-width: 300px;
+	max-width: 450px;
+	width: 40vw;
+}
+
+.calculator__header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.toggle-container {
+	display: flex;
+	align-items: flex-end;
+	gap: 30px;
+}
+
+.toggle {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	min-width: 80px;
+}
+
+.toggle__labels {
+	color: var(--color-key--other);
+	display: flex;
+	justify-content: space-between;
+	padding: .2rem;
+}
+
+.toggle__inputs {
+	background-color: var(--bg-toggle);
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	padding: 0.2rem;
+}
+
+.toggle__input {
+	visibility: hidden;
+	width: 100%;
+}
+
+.toggle__switch {
+	position: absolute;
+	background-color: var(--bg-toggle-switch);
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	left: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .2s ease-in-out;
+}
+
+body.theme-01 .toggle__switch {
+	left: 5%;
+	transform: translate(-5%, -50%);
+}
+
+body.theme-02 .toggle__switch {
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+body.theme-03 .toggle__switch {
+	left: 75%;
+	transform: translateX(-75%, -50%);
+}
+
+.calculator__screen {
+	background-color: var(--bg-screen);
+	border: none;
+	border-radius: var(--radius--regular);
+	color: var(--color-key--other);
+	height: 90px;
+	font-size: var(--calc-screen-font-size);
+	font-weight: bold;
+	text-align: right;
+	padding: var(--padding--regular);
+	outline: none;
+	pointer-events: none;
+}
+
+.calculator__keypad {
+	background-color: var(--bg-keypad);
+	border-radius: var(--radius--regular);
+	display: grid;
+	gap: var(--gap--regular);
+	padding: var(--padding--regular);
+}
+
+.regular-keys-container {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat(4,1fr);
+	gap: var(--gap--regular);
+}
+
+.state-keys-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap--regular);
+}
+
+.btn {
+	border: none;
+	border-radius: var(--radius--regular);
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: var(--padding--btn);
+	transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn:active {
+	transform: scale(1.02);
+}
+
+.btn--numeric {
+	background-color: var(--bg-key--regular);
+	color: var(--color-key--regular);
+	box-shadow: 0 2px 1px 1px var(--shadow-color-key--regular);
+}
+
+.btn--signal {
+	background-color: var(--bg-key--regular);
+	color: var(--color-key--regular);
+	box-shadow: 0 2px 1px 1px var(--shadow-color-key--regular);
+}
+
+.btn--delete {
+	background-color: var(--bg-key--delete);
+	color: var(--color-key--delete);
+	box-shadow: 0 2px 1px 1px var(--shadow-color-key--delete);
+}
+
+.btn--reset {
+	background-color: var(--bg-key--reset);
+	color: var(--color-key--reset);
+	box-shadow: 0 2px 1px 1px var(--shadow-color-key--reset);
+}
+
+.btn--result {
+	background-color: var(--bg-key--result);
+	color: var(--color-key--result);
+	box-shadow: 0 2px 1px 1px var(--shadow-color-key--result);
+}
+
+.github-profile-address {
+	color: var(--color-key--other);
+	text-align: center;
+}
+
+.anchor {
+	color: rgb(27, 162, 113);
 }
