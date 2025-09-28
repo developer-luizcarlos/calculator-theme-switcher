@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url(variables.css);
 
 *,
@@ -18,6 +19,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: var(--font);
 }
 
 html {
