@@ -15,5 +15,53 @@
 		<script type="module" defer src="dist/main.js"></script>
 		<title>Calculator App</title>
 	</head>
-	<body></body>
+	<body class="theme-01">
+		<article class="calculator">
+			<header class="calculator__header">
+				<h3 class="heading heading--h1">calc</h3>
+				<div class="toggle-container">
+					<h4 class="heading heading--h4 heading--uppercase">theme</h4>
+					<div class="toggle">
+						<div class="toggle__labels">
+							<label for="input-theme-1" class="toggle__label">1</label>
+							<label for="input-theme-2" class="toggle__label">2</label>
+							<label for="input-theme-3" class="toggle__label">3</label>
+						</div>
+						<div class="toggle__inputs">
+							<span class="toggle__switch"></span>
+							<input type="radio" name="toggle-input" id="input-theme-1"  checked class="toggle__input">
+							<input type="radio" name="toggle-input" id="input-theme-2" class="toggle__input">
+							<input type="radio" name="toggle-input" id="input-theme-3" class="toggle__input">
+						</div>
+					</div>
+				</div>
+			</header>
+			<input type="text" value="0" readonly class="calculator__screen">
+			<div class="calculator__keypad">
+				<div class="regular-keys-container">
+					<button data-value="7" class="btn btn--numeric">7</button>
+					<button data-value="8" class="btn btn--numeric">8</button>
+					<button data-value="9" class="btn btn--numeric">9</button>
+					<button class="btn btn--delete">del</button>
+					<button data-value="4" class="btn btn--numeric">4</button>
+					<button data-value="5" class="btn btn--numeric">5</button>
+					<button data-value="6" class="btn btn--numeric">6</button>
+					<button data-value="+" class="btn btn--signal">+</button>
+					<button data-value="1" class="btn btn--numeric">1</button>
+					<button data-value="2" class="btn btn--numeric">2</button>
+					<button data-value="3" class="btn btn--numeric">3</button>
+					<button data-value="-" class="btn btn--signal">-</button>
+					<button data-value="." class="btn btn--signal">.</button>
+					<button data-value="0" class="btn btn--numeric">0</button>
+					<button data-value="/" class="btn btn--signal">/</button>
+					<button data-value="x" class="btn btn--signal">x</button>
+				</div>
+				<div class="state-keys-container">
+					<button class="btn btn--reset btn--state">reset</button>
+					<button class="btn btn--result btn--state">=</button>
+				</div>
+			</div>
+			<address class="github-profile-address">This project code can be found on my <a target="_blank" title="Page's repository" rel="noopener" referrerpolicy="no-referrer" href="https://github.com/developer-luizcarlos/calculator-theme-switcher" class="anchor">Github Profile</a></address>
+		</article>
+	</body>
 </html>
