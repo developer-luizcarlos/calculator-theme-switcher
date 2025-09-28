@@ -1,0 +1,15 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+yarn.debug.log*
+yarn.error.log*
+npm-debug.log*
+
+# Production
+/build
+/.next
+/out
+
+# IDEs and editors
+/.vscode
