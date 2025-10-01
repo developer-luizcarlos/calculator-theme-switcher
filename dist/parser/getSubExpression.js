@@ -10,5 +10,4 @@ const getSubExpression = (expression) => {
     const subExpression = `${left}${precedence}${right}`;
     return subExpression;
 };
-console.log(getSubExpression("9*3*27-1"));
 export default getSubExpression;

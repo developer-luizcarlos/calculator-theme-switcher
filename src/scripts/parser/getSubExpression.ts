@@ -14,6 +14,4 @@ const getSubExpression = (expression: string): string => {
 	return subExpression;
 };
 
-console.log(getSubExpression("9*3*27-1"));
-
 export default getSubExpression;

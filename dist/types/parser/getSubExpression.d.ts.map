@@ -1,1 +1,1 @@
-{"version":3,"file":"getSubExpression.d.ts","sourceRoot":"","sources":["../../../src/scripts/parser/getSubExpression.ts"],"names":[],"mappings":"AAGA,QAAA,MAAM,gBAAgB,GAAI,YAAY,MAAM,KAAG,MAW9C,CAAC;AAIF,eAAe,gBAAgB,CAAC"}
+{"version":3,"file":"getSubExpression.d.ts","sourceRoot":"","sources":["../../../src/scripts/parser/getSubExpression.ts"],"names":[],"mappings":"AAGA,QAAA,MAAM,gBAAgB,GAAI,YAAY,MAAM,KAAG,MAW9C,CAAC;AAEF,eAAe,gBAAgB,CAAC"}
