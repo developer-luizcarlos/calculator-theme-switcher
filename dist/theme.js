@@ -5,7 +5,6 @@ export const setTheme = (theme) => {
     document.body.className = theme;
 };
 export const loadTheme = () => {
-    var _a;
-    const theme = (_a = localStorage.getItem("theme")) !== null && _a !== void 0 ? _a : "theme-01";
+    const theme = localStorage.getItem("theme") ?? "theme-01";
     document.body.className = theme;
 };
