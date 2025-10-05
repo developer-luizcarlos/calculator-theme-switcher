@@ -28,11 +28,25 @@ function addValueToCalculatorScreen(
 	value: string,
 	type: "numeric" | "signal",
 ): void {
-	if (type === "signal" && !isLastCharNumber(calculatorScreen.value)) {
-		return;
+	const calcValue = calculatorScreen.value;
+
+	if (type === "numeric") {
+		if (calcValue === "0" && value === "0") {
+			calculatorScreen.value = "0";
+		} else if (calcValue === "0" && value !== "0") {
+			calculatorScreen.value = value;
+		} else {
+			calculatorScreen.value += value;
+		}
 	}
 
-	calculatorScreen.value = calculatorScreen.value + value;
+	if (type === "signal" && isLastCharNumber(calcValue)) {
+		if (calcValue === "0" && (value === "+" || value === "-")) {
+			calculatorScreen.value = value;
+		} else {
+			calculatorScreen.value += value;
+		}
+	}
 }
 
 function deleteValueFromCalculatorScreen(): void {

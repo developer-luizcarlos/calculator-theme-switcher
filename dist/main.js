@@ -10,10 +10,26 @@ const calculatorScreen = document.querySelector(".calculator__screen");
 const toggleInputs = document.querySelectorAll(".toggle__input");
 // Functions Declarations
 function addValueToCalculatorScreen(value, type) {
-    if (type === "signal" && !isLastCharNumber(calculatorScreen.value)) {
-        return;
+    const calcValue = calculatorScreen.value;
+    if (type === "numeric") {
+        if (calcValue === "0" && value === "0") {
+            calculatorScreen.value = "0";
+        }
+        else if (calcValue === "0" && value !== "0") {
+            calculatorScreen.value = value;
+        }
+        else {
+            calculatorScreen.value += value;
+        }
     }
-    calculatorScreen.value = calculatorScreen.value + value;
+    if (type === "signal" && isLastCharNumber(calcValue)) {
+        if (calcValue === "0" && (value === "+" || value === "-")) {
+            calculatorScreen.value = value;
+        }
+        else {
+            calculatorScreen.value += value;
+        }
+    }
 }
 function deleteValueFromCalculatorScreen() {
     const calcValue = calculatorScreen.value;
