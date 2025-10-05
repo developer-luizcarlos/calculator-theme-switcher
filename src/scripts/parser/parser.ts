@@ -1,20 +1,15 @@
-import getSubExpression from "./getSubExpression.ts";
-import hasExpressionOperators from "./hasExpressionOperators.ts";
-import resolve from "./resolve.ts";
+import hasExpressionOperators from "./helpers/hasExpressionOperators.ts";
+import isValidMathExpression from "./helpers/isValidMathExpression.ts";
+import resolve from "./helpers/resolve.ts";
 
-const parser = (expression: string) => {
+export default function parser(expression: string): string {
+	const isValidExpression = isValidMathExpression(expression);
 	const hasOperators = hasExpressionOperators(expression);
 
-	if (!hasOperators) {
+	if (!isValidExpression || !hasOperators) {
 		return expression;
 	}
 
-	const subExpression = getSubExpression(expression);
-	const result = resolve(subExpression).toString();
-
-	expression = expression.replace(subExpression, result);
-
+	expression = resolve(expression);
 	return parser(expression);
-};
-
-export default parser;
+}
