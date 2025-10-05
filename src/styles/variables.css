@@ -50,3 +50,47 @@ body.theme-01 {
 	--shadow-color-key--result: hsl(6, 70%, 34%);
 	--shadow-color-key--toggle-switch: hsl(6, 70%, 34%);
 }
+
+body.theme-02 {
+	--bg-body: hsl(0, 0%, 90%);
+	--bg-key--delete: hsl(185, 42%, 37%);
+	--bg-key--regular: hsl(0, 0%, 90%);
+	--bg-key--reset: hsl(185, 42%, 37%);
+	--bg-key--result: hsl(25, 98%, 40%);
+	--bg-keypad: hsl(0, 5%, 81%);
+	--bg-screen: hsl(0, 0%, 93%);
+	--bg-toggle-switch: hsl(25, 98%, 40%);
+	--bg-toggle: hsl(0, 5%, 81%);
+	--color-key--delete: hsl(0, 100%, 100%);
+	--color-key--other: hsl(60, 10%, 19%);
+	--color-key--regular: hsl(60, 10%, 19%);
+	--color-key--reset: hsl(0, 100%, 100%);
+	--color-key--result: hsl(0, 100%, 100%);
+	--shadow-color-key--delete: hsl(185, 58%, 25%);
+	--shadow-color-key--regular: hsl(35, 11%, 61%);
+	--shadow-color-key--reset: hsl(185, 58%, 25%);
+	--shadow-color-key--result: hsl(25, 99%, 27%);
+	--shadow-color-key--toggle-switch: hsl(25, 99%, 27%);
+}
+
+body.theme-03 {
+	--bg-body: hsl(268, 75%, 9%);
+	--bg-key--delete: hsl(281, 89%, 26%);
+	--bg-key--regular: hsl(268, 47%, 21%);
+	--bg-key--reset: hsl(281, 89%, 26%);
+	--bg-key--result: hsl(176, 100%, 44%);
+	--bg-keypad: hsl(268, 71%, 12%);
+	--bg-screen: hsl(268, 71%, 12%);
+	--bg-toggle-switch: hsl(176, 100%, 44%);
+	--bg-toggle: hsl(268, 71%, 12%);
+	--color-key--delete: hsl(0, 100%, 100%);
+	--color-key--other: hsl(52, 100%, 62%);
+	--color-key--regular: hsl(52, 100%, 62%);
+	--color-key--reset: hsl(0, 100%, 100%);
+	--color-key--result: hsl(198, 20%, 13%);
+	--shadow-color-key--delete: hsl(290, 70%, 36%);
+	--shadow-color-key--regular: hsl(290, 70%, 36%);
+	--shadow-color-key--reset: hsl(290, 70%, 36%);
+	--shadow-color-key--result: hsl(177, 92%, 70%);
+	--shadow-color-key--toggle-switch: hsl(177, 92%, 70%);
+}
