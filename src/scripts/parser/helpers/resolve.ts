@@ -1,4 +1,4 @@
-import {type Operator} from "src/scripts/types/operator.types";
+import {type Operator} from "./../../types/operator.types.ts";
 
 export default function resolve(expression: string): string {
 	const regexp =

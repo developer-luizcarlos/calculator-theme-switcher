@@ -1,4 +1,4 @@
-import {} from "src/scripts/types/operator.types";
+import {} from "./../../types/operator.types.js";
 export default function resolve(expression) {
     const regexp = /(?<left>[-+]?\d+(\.\d+)?)(?<operator>[-+/*])(?<right>\d+(\.\d+)?)/;
     const groups = expression.match(regexp)?.groups;
