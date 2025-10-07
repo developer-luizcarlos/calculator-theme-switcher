@@ -51,6 +51,7 @@ function resetCalculatorScreen() {
 // Functions Applied
 document.addEventListener("DOMContentLoaded", () => {
     loadTheme();
+    resetCalculatorScreen();
 });
 btnDelete.addEventListener("click", deleteValueFromCalculatorScreen);
 btnNumeric.forEach(btn => {

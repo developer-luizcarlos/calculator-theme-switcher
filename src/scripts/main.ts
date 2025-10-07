@@ -75,6 +75,7 @@ function resetCalculatorScreen(): void {
 // Functions Applied
 document.addEventListener("DOMContentLoaded", () => {
 	loadTheme();
+	resetCalculatorScreen();
 });
 
 btnDelete.addEventListener("click", deleteValueFromCalculatorScreen);
