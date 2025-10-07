@@ -1,8 +1,10 @@
 import {type Operator} from "./../../types/operator.types.ts";
+import getPrecedence from "./getPrecedence.ts";
+import getRegexpPattern from "./getRegexpPattern.ts";
 
 export default function resolve(expression: string): string {
-	const regexp =
-		/(?<left>[-+]?\d+(\.\d+)?)(?<operator>[-+/*])(?<right>\d+(\.\d+)?)/;
+	const precedence = getPrecedence(expression);
+	const regexp = getRegexpPattern(precedence);
 
 	const groups = expression.match(regexp)?.groups;
 
