@@ -1,4 +1,5 @@
 // Imports
+import parser from "./parser/parser.ts";
 import {loadTheme, setTheme} from "./theme.ts";
 import type {Theme} from "./types/theme.types.ts";
 import isLastCharNumber from "./utils/isLastCharNumber.ts";
@@ -15,6 +16,9 @@ const btnSignal = document.querySelectorAll(
 ) as NodeListOf<HTMLButtonElement>;
 const btnReset = document.querySelector(
 	".btn--reset",
+) as HTMLButtonElement;
+const btnResult = document.querySelector(
+	".btn--result",
 ) as HTMLButtonElement;
 const calculatorScreen = document.querySelector(
 	".calculator__screen",
@@ -46,6 +50,15 @@ function addValueToCalculatorScreen(
 		} else {
 			calculatorScreen.value += value;
 		}
+	}
+}
+
+function calculateResult(): void {
+	const expression = calculatorScreen.value;
+
+	if (isLastCharNumber(expression)) {
+		const result = parser(expression);
+		calculatorScreen.value = isNaN(parseFloat(result)) ? "0" : result;
 	}
 }
 
@@ -81,6 +94,8 @@ btnSignal.forEach(btn => {
 });
 
 btnReset.addEventListener("click", resetCalculatorScreen);
+
+btnResult.addEventListener("click", calculateResult);
 
 toggleInputs.forEach(radio => {
 	radio.addEventListener("input", e => {

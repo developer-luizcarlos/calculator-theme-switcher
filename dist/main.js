@@ -1,4 +1,5 @@
 // Imports
+import parser from "./parser/parser.js";
 import { loadTheme, setTheme } from "./theme.js";
 import isLastCharNumber from "./utils/isLastCharNumber.js";
 // DOM Elements
@@ -6,6 +7,7 @@ const btnDelete = document.querySelector(".btn--delete");
 const btnNumeric = document.querySelectorAll(".btn--numeric");
 const btnSignal = document.querySelectorAll(".btn--signal");
 const btnReset = document.querySelector(".btn--reset");
+const btnResult = document.querySelector(".btn--result");
 const calculatorScreen = document.querySelector(".calculator__screen");
 const toggleInputs = document.querySelectorAll(".toggle__input");
 // Functions Declarations
@@ -29,6 +31,13 @@ function addValueToCalculatorScreen(value, type) {
         else {
             calculatorScreen.value += value;
         }
+    }
+}
+function calculateResult() {
+    const expression = calculatorScreen.value;
+    if (isLastCharNumber(expression)) {
+        const result = parser(expression);
+        calculatorScreen.value = isNaN(parseFloat(result)) ? "0" : result;
     }
 }
 function deleteValueFromCalculatorScreen() {
@@ -57,6 +66,7 @@ btnSignal.forEach(btn => {
     });
 });
 btnReset.addEventListener("click", resetCalculatorScreen);
+btnResult.addEventListener("click", calculateResult);
 toggleInputs.forEach(radio => {
     radio.addEventListener("input", e => {
         const input = e.target;
