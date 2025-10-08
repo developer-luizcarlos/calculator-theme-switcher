@@ -1,6 +1,9 @@
 import {} from "./../../types/operator.types.js";
+import getPrecedence from "./getPrecedence.js";
+import getRegexpPattern from "./getRegexpPattern.js";
 export default function resolve(expression) {
-    const regexp = /(?<left>[-+]?\d+(\.\d+)?)(?<operator>[-+/*])(?<right>\d+(\.\d+)?)/;
+    const precedence = getPrecedence(expression);
+    const regexp = getRegexpPattern(precedence);
     const groups = expression.match(regexp)?.groups;
     if (!groups) {
         return expression;
