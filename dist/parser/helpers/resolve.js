@@ -9,7 +9,14 @@ export default function resolve(expression) {
     if (!groups) {
         return expression;
     }
-    const left = index === 0
+    const expressionStartsWithOperator = index === 0 && /^[-+/*]/.test(expression);
+    /*
+        If the first character of an expression is an
+        operator, then the operator signal will be ignored
+        when assign the value of the variable left, being
+        its value starting from the first number.
+    */
+    const left = expressionStartsWithOperator
         ? parseFloat(groups.left.slice(1))
         : parseFloat(groups.left);
     const right = parseFloat(groups.right);
