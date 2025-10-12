@@ -7,12 +7,16 @@ export default function resolve(expression: string): string {
 	const regexp = getRegexpPattern(precedence);
 
 	const groups = expression.match(regexp)?.groups;
+	const index = expression.match(regexp)?.index;
 
 	if (!groups) {
 		return expression;
 	}
 
-	const left = parseFloat(groups.left);
+	const left =
+		index === 0
+			? parseFloat(groups.left.slice(1))
+			: parseFloat(groups.left);
 	const right = parseFloat(groups.right);
 	const operator = groups.operator as Operator;
 
@@ -37,5 +41,7 @@ export default function resolve(expression: string): string {
 		result = NaN;
 	}
 
-	return expression.replace(regexp, result.toString());
+	const previousSubExpression = `${left}${operator}${right}`;
+
+	return expression.replace(previousSubExpression, result.toString());
 }
