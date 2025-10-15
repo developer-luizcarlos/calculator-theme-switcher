@@ -1,6 +1,7 @@
 // Imports
 import parser from "./parser/parser.js";
 import { loadTheme, setTheme } from "./theme.js";
+import formatExpression from "./utils/formatExpression.js";
 import isLastCharNumber from "./utils/isLastCharNumber.js";
 // DOM Elements
 const btnDelete = document.querySelector(".btn--delete");
@@ -37,7 +38,9 @@ function calculateResult() {
     const expression = calculatorScreen.value;
     if (isLastCharNumber(expression)) {
         const result = parser(expression);
-        calculatorScreen.value = isNaN(parseFloat(result)) ? "0" : result;
+        calculatorScreen.value = isNaN(parseFloat(result))
+            ? "0"
+            : formatExpression(result, 3);
     }
 }
 function deleteValueFromCalculatorScreen() {
@@ -54,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resetCalculatorScreen();
 });
 btnDelete.addEventListener("click", deleteValueFromCalculatorScreen);
-btnNumeric.forEach(btn => {
+btnNumeric.forEach((btn) => {
     btn.addEventListener("click", () => {
         const value = btn.getAttribute("data-value");
         addValueToCalculatorScreen(value, "numeric");
     });
 });
-btnSignal.forEach(btn => {
+btnSignal.forEach((btn) => {
     btn.addEventListener("click", () => {
         const value = btn.getAttribute("data-value");
         addValueToCalculatorScreen(value, "signal");
@@ -68,8 +71,8 @@ btnSignal.forEach(btn => {
 });
 btnReset.addEventListener("click", resetCalculatorScreen);
 btnResult.addEventListener("click", calculateResult);
-toggleInputs.forEach(radio => {
-    radio.addEventListener("input", e => {
+toggleInputs.forEach((radio) => {
+    radio.addEventListener("input", (e) => {
         const input = e.target;
         const value = input.value;
         setTheme(value);
