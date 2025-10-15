@@ -21,9 +21,10 @@
 	--shadow-color-key--toggle-switch: hsl(6, 70%, 34%);
 
 	/* Rules Pattern */
-	--calc-screen-font-size: 2.5rem;
+	--calc-screen-font-size: clamp(2.5rem,2vw,3rem);
+	--font-size: clamp(1rem, 1.5vw,1.2rem);
 	--font: "League Spartan", sans-serif;
-	--gap--regular: 15px;
+	--gap--regular: 20px;
 	--padding--btn: 0.75rem 0.5rem;
 	--padding--regular: 1.8rem;
 	--radius--regular: 5px;
