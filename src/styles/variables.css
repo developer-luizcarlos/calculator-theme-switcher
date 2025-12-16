@@ -1,0 +1,26 @@
+:root {
+	--bg-body: hsl(222, 26%, 31%);
+	--bg-delete-key: hsl(225, 21%, 49%);
+	--bg-keypad: hsl(223, 31%, 20%);
+	--bg-operator-key: hsl(0, 0%, 90%);
+	--bg-regular-key: hsl(0, 0%, 90%);
+	--bg-reset-key: hsl(225, 21%, 49%);
+	--bg-result-key: hsl(6, 63%, 50%);
+	--bg-screen: hsl(224, 36%, 15%);
+	--bg-thumb: hsl(6, 63%, 50%);
+	--bg-toggle: hsl(223, 31%, 20%);
+
+	--color-delete-key: hsl(0, 100%, 100%);
+	--color-operator-key: hsl(221, 14%, 31%);
+	--color-regular-key: hsl(221, 14%, 31%);
+	--color-reset-key: hsl(0, 100%, 100%);
+	--color-result-key: hsl(0, 100%, 100%);
+
+	--font: "League Spartan", sans-serif;
+
+	--shadow-delete-key: hsl(224, 28%, 35%);
+	--shadow-operator-key: hsl(28, 16%, 65%);
+	--shadow-regular-key: hsl(28, 16%, 65%);
+	--shadow-reset-key: hsl(224, 28%, 35%);
+	--shadow-result-key: hsl(6, 70%, 34%);
+}
