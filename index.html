@@ -15,5 +15,49 @@
 		<script type="module" src="dist/index.js"></script>
 		<title>Calculator Web App</title>
 	</head>
-	<body></body>
+	<body class="dark-theme">
+		<article class="calculator">
+			<header class="header">
+				<h3 class="app-title">calc</h3>
+				<div class="theme-container">
+					<h5>THEME</h5>
+					<div class="select-theme-container">
+						<div class="labels-container">
+							<label class="label label--theme-dark">1</label>
+							<label class="label label--theme-light">2</label>
+							<label class="label label--theme-purple">3</label>
+						</div>
+						<div class="toggle">
+							<span class="thumb"></span>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="screen">0</div>
+			<div class="keypad">
+				<div class="action-keys-container">
+					<button data-value="7" class="key key--regular">7</button>
+					<button data-value="8" class="key key--regular">8</button>
+					<button data-value="9" class="key key--regular">9</button>
+					<button class="key key--delete">del</button>
+					<button data-value="4" class="key key--regular">4</button>
+					<button data-value="5" class="key key--regular">5</button>
+					<button data-value="6" class="key key--regular">6</button>
+					<button data-value="+" class="key key--operator">+</button>
+					<button data-value="1" class="key key--regular">1</button>
+					<button data-value="2" class="key key--regular">2</button>
+					<button data-value="3" class="key key--regular">3</button>
+					<button data-value="-" class="key key--operator">-</button>
+					<button data-value="." class="key key--operator">.</button>
+					<button data-value="0" class="key key--regular">0</button>
+					<button data-value="/" class="key key--operator">/</button>
+					<button data-value="*" class="key key--operator">x</button>
+				</div>
+				<div class="state-keys-container">
+					<button class="key key--reset">reset</button>
+					<button class="key key--result">=</button>
+				</div>
+			</div>
+		</article>
+	</body>
 </html>
