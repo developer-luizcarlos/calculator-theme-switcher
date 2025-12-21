@@ -1,6 +1,6 @@
 /*
- * [] checar se uma expressão é válida (isValidExpression);
- * [] pegar a operação que possui a precedência (getOperationPrecedence);
+ * [x] checar se uma expressão é válida (isValidExpression);
+ * [x] pegar a operação que possui a precedência (getExpressionCurrentPrecedence);
  * [] criar uma função para pegar a primeira subexpressão que contenha
  * o operador obtido em getOPerationPrecedence;
  * [] criar uma função para gerar um regex da subexpressão, recebendo
@@ -11,9 +11,10 @@
  * de um operando à esquerda, um operador ao centro e um operando à direita;
  */
 
+import {getExpressionCurrentPrecedence} from "./helpers/getExpressionCurrentPrecedence.ts";
 import {isValidExpression} from "./helpers/isValidExpression.ts";
 
-const expression = "0.125/12-33*4.56";
+const expression = "-0.125/12-33*4.56";
 
 const res = parser(expression);
 
@@ -32,5 +33,7 @@ export function parser(expression: string): string {
 		return expression;
 	}
 
-	return isValid;
+	const currentPrecedence = getExpressionCurrentPrecedence(expression);
+
+	return currentPrecedence;
 }
