@@ -27,7 +27,11 @@ export function getSubExpression(
 
 	const regexMatch = expression.match(subExpressionRegex);
 
-	const subExpression = regexMatch!.toString();
+	const groups = regexMatch!.groups!;
+
+	const {firstOperand, operator, secondOperand} = groups;
+
+	const subExpression = `${firstOperand}${operator}${secondOperand}`;
 
 	return subExpression;
 }
