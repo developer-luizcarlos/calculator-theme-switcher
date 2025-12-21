@@ -20,4 +20,3 @@ export const VALID_EXPRESSION_REGEX =
  * +0.5/10.5
  *
  */
-export const EXPRESSION_START_WITH_OPERATOR_REGEX = /^[\+\-]/;
