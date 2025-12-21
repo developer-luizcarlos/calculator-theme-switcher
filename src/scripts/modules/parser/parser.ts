@@ -1,9 +1,9 @@
 /*
  * [x] checar se uma expressão é válida (isValidExpression);
  * [x] pegar a operação que possui a precedência (getExpressionCurrentPrecedence);
- * [] criar uma função para pegar a primeira subexpressão que contenha
+ * [x] criar uma função para pegar a primeira subexpressão que contenha
  * o operador obtido em getOPerationPrecedence;
- * [] criar uma função para gerar um regex da subexpressão, recebendo
+ * [x] criar uma função para gerar um regex da subexpressão, recebendo
  * como argumento a operação que possui a precedência, sendo usado
  * para depois realizar a troca na expressão da subexpressão por ela
  * mesma resolvida;
@@ -12,6 +12,8 @@
  */
 
 import {getExpressionCurrentPrecedence} from "./helpers/getExpressionCurrentPrecedence.ts";
+import {getSubExpression} from "./helpers/getSubExpression.ts";
+// import {generateSubExpressionRegex} from "./helpers/getSubExpressionRegex.ts";
 import {isValidExpression} from "./helpers/isValidExpression.ts";
 
 const expression = "-0.125/12-33*4.56";
@@ -35,5 +37,8 @@ export function parser(expression: string): string {
 
 	const currentPrecedence = getExpressionCurrentPrecedence(expression);
 
-	return currentPrecedence;
+	// const subExpressionRegex = generateSubExpressionRegex(currentPrecedence);
+	const subExpression = getSubExpression(expression, currentPrecedence);
+
+	return subExpression;
 }
