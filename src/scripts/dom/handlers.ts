@@ -1,87 +1,65 @@
+import * as keyboard from "./keyboard.ts";
 import * as keys from "./keys.ts";
 import * as screen from "./screen.ts";
 
-import {EXPRESSION_LAST_CHAR_IS_OPERATOR_REGEX} from "../modules/regex/patterns.ts";
-
-import {parser} from "../modules/parser/parser.ts";
-
 export function deleteKeyHandler(): void {
-	const screenValue = screen.getScreenValue();
-
-	if (screenValue === "0") {
-		return;
-	}
-
-	if (screenValue.length === 1) {
-		screen.setScreenValue("0");
-	} else {
-		const slicedScreenValue = screenValue.slice(0, -1);
-
-		screen.setScreenValue(slicedScreenValue);
-	}
+	screen.deleteLastDigit();
 }
 
 export function operatorKeyHandler(operatorKey: HTMLButtonElement): void {
 	const keyValue = keys.getKeyValue(operatorKey);
 
-	const screenValue = screen.getScreenValue();
-
-	const screenValueLength = screenValue.length;
-
-	const isLastCharAnOperator =
-		EXPRESSION_LAST_CHAR_IS_OPERATOR_REGEX.test(screenValue);
-
-	if (isLastCharAnOperator) {
-		return;
-	}
-
-	if (screenValueLength < screen.SCREEN_VALUE_LENGTH_LIMIT) {
-		if (screenValue === "0") {
-			if (keyValue === "+" || keyValue === "-") {
-				screen.setScreenValue(keyValue);
-			} else {
-				screen.setScreenValue(screenValue + keyValue);
-			}
-		} else {
-			screen.setScreenValue(screenValue + keyValue);
-		}
-	}
+	screen.insertOperatorDigit(keyValue);
 }
 
 export function regularKeyHandler(regularKey: HTMLButtonElement): void {
 	const keyValue = keys.getKeyValue(regularKey);
 
-	const screenValue = screen.getScreenValue();
-
-	const screenValueLength = screenValue.length;
-
-	if (screenValueLength < screen.SCREEN_VALUE_LENGTH_LIMIT) {
-		if (screenValue === "0") {
-			screen.setScreenValue(keyValue);
-		} else {
-			screen.setScreenValue(screenValue + keyValue);
-		}
-	}
+	screen.insertNumericDigit(keyValue);
 }
 
 export function resetKeyHandler(): void {
-	const screenValue = screen.getScreenValue();
-
-	if (screenValue === "0") {
-		return;
-	}
-
-	screen.setScreenValue("0");
+	screen.reset();
 }
 
 export function resultKeyHandler() {
-	const expression = screen.getScreenValue();
+	screen.displayResult();
+}
 
-	const evaluatedExpression = parser(expression);
+export function keyboardHandler(e: KeyboardEvent): void {
+	const key = e.key;
 
-	if (evaluatedExpression === expression) {
+	const isNumericKey = keyboard.isNumericKey(key);
+	const isOperatorKey = keyboard.isOperatorKey(key);
+	const isDeleteKey = keyboard.isDeleteKey(key);
+	const isResultKey = keyboard.isResultKey(key);
+	const isResetKey = keyboard.isResetKey(key);
+
+	const isInvalidKey =
+		!isNumericKey &&
+		!isOperatorKey &&
+		!isDeleteKey &&
+		!isResultKey &&
+		!isResetKey;
+
+	if (isInvalidKey) {
 		return;
 	}
 
-	screen.setScreenValue(evaluatedExpression);
+	// triggers quick find on firefox.
+	if (key === "/") {
+		e.preventDefault();
+	}
+
+	if (isNumericKey) {
+		screen.insertNumericDigit(key);
+	} else if (isOperatorKey) {
+		screen.insertOperatorDigit(key);
+	} else if (isDeleteKey) {
+		screen.deleteLastDigit();
+	} else if (isResultKey) {
+		screen.displayResult();
+	} else if (isResetKey) {
+		screen.reset();
+	}
 }
