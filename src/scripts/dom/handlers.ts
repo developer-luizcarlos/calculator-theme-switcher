@@ -1,6 +1,5 @@
 import * as helpers from "../helpers/helpers.ts";
 import * as themeStorage from "../storage/theme.storage.ts";
-import type {Theme} from "../types/theme.types.ts";
 import * as body from "./body.ts";
 import * as keyboard from "./keyboard.ts";
 import * as keys from "./keys.ts";
