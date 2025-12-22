@@ -29,8 +29,8 @@ body {
 }
 
 body.dark-theme .thumb {
-	left: 5%;
-	transform: translate(-5%, -50%);
+	left: 10%;
+	transform: translate(-10%, -50%);
 }
 
 body.light-theme .thumb {
@@ -39,8 +39,8 @@ body.light-theme .thumb {
 }
 
 body.purple-theme .thumb {
-	left: 95%;
-	transform: translate(-95%, -50%);
+	left: 90%;
+	transform: translate(-90%, -50%);
 }
 
 .calculator {
@@ -84,12 +84,11 @@ body.purple-theme .thumb {
 
 .toggle {
 	background-color: var(--bg-toggle);
-	border-radius: 40px;
+	border-radius: 50px;
 	cursor: pointer;
-	height: 20px;
+	height: 25px;
 	width: clamp(70px, 15vw, 85px);
 	position: relative;
-	padding: 10px;
 }
 
 .thumb {
@@ -102,11 +101,12 @@ body.purple-theme .thumb {
 	left: 5%;
 	top: 50%;
 	transform: translate(-5%, -50%);
+	transition: all 0.3s ease;
 }
 
 .screen {
 	background-color: var(--bg-screen);
-	border-radius: 5px;
+	border-radius: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: end;
@@ -119,33 +119,33 @@ body.purple-theme .thumb {
 
 .keypad {
 	background-color: var(--bg-keypad);
-	border-radius: 5px;
+	border-radius: 15px;
 	display: grid;
-	row-gap: 15px;
+	row-gap: 25px;
 	padding: clamp(15px, 2rem, 30px);
 }
 
 .action-keys-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 15px;
+	gap: 20px;
 }
 
 .state-keys-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 15px;
+	gap: 20px;
 }
 
 .key {
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: clamp(1rem, 2.5vw, 1.5rem);
+	font-size: clamp(1rem, 2.5vw, 2rem);
 	font-weight: bold;
-	height: clamp(40px, 8vh, 55px);
-	width: max(50px, 100%);
+	height: clamp(40px, 8vh, 60px);
+	width: max(60px, 100%);
 }
 
 .key--regular {
