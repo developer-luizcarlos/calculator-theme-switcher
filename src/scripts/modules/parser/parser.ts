@@ -1,11 +1,4 @@
-import {evaluate} from "mathjs";
 import {isValidExpression} from "./helpers/isValidExpression.ts";
-
-const expression = "12.54/2+7-38/4+152-6/3+910/5-1";
-
-const res = parser(expression);
-
-console.log({res});
 
 /**
  * Receives a mathematical expression
@@ -20,5 +13,5 @@ export function parser(expression: string): string {
 		return expression;
 	}
 
-	return evaluate(expression);
+	return eval(expression);
 }

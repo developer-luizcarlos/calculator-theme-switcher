@@ -1,8 +1,4 @@
-import { evaluate } from "mathjs";
 import { isValidExpression } from "./helpers/isValidExpression.js";
-const expression = "12.54/2+7-38/4+152-6/3+910/5-1";
-const res = parser(expression);
-console.log({ res });
 /**
  * Receives a mathematical expression
  * and resolves it.
@@ -14,6 +10,6 @@ export function parser(expression) {
     if (!isValid) {
         return expression;
     }
-    return evaluate(expression);
+    return eval(expression);
 }
 //# sourceMappingURL=parser.js.map

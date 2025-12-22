@@ -12,11 +12,4 @@
 export const VALID_EXPRESSION_REGEX =
 	/^[\+\-]?(?<firstOperand>[0-9]+(?:\.[0-9]+)?)(?:(?<operator>[\+\-\*\/])(?<secondOperand>[0-9]+(?:\.[0-9]+)?))+$/;
 
-/**
- * Valid examples:
- *
- * -12+5
- *
- * +0.5/10.5
- *
- */
+export const EXPRESSION_LAST_CHAR_IS_OPERATOR_REGEX = /[\+\-\*\/\.]$/;

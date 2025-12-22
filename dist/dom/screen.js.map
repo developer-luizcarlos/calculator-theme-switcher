@@ -1,0 +1,1 @@
+{"version":3,"file":"screen.js","sourceRoot":"","sources":["../../src/scripts/dom/screen.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,OAAO,EAAC,MAAM,eAAe,CAAC;AAEtC,MAAM,CAAC,MAAM,yBAAyB,GAAG,EAAE,CAAC;AAE5C,MAAM,UAAU,cAAc;IAC7B,OAAO,OAAQ,CAAC,WAAY,CAAC;AAC9B,CAAC;AAED,MAAM,UAAU,cAAc,CAAC,KAAa;IAC3C,OAAQ,CAAC,WAAW,GAAG,KAAK,CAAC;AAC9B,CAAC"}
