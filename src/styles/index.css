@@ -141,7 +141,6 @@ body.purple-theme .thumb {
 .key {
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
 	font-family: inherit;
 	font-size: clamp(1.7rem, 2.5vw, 2rem);
 	font-weight: bold;
