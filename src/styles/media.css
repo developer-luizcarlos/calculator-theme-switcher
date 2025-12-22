@@ -36,4 +36,8 @@
 	.key--result:hover {
 		background-color: var(--highlight-result-key);
 	}
+
+	.thumb:hover {
+		background-color: var(--highlight-thumb);
+	}
 }

@@ -24,6 +24,7 @@
 	--highlight-regular-key: hsl(20, 23%, 97%);
 	--highlight-reset-key: hsl(223, 38%, 71%);
 	--highlight-result-key: hsl(0, 86%, 65%);
+	--highlight-thumb: hsl(0, 86%, 65%);
 
 	--shadow-delete-key: hsl(224, 28%, 35%);
 	--shadow-operator-key: hsl(28, 16%, 65%);
