@@ -5,7 +5,7 @@ export function isDeleteKey(key: string): boolean {
 }
 
 export function isNumericKey(key: string): boolean {
-	return /[0-9]/.test(key);
+	return /^[0-9]$/.test(key);
 }
 
 export function isOperatorKey(key: string): boolean {
