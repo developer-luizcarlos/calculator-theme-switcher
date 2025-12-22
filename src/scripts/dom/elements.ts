@@ -1,3 +1,5 @@
+export const $body = document.body as HTMLBodyElement;
+
 export const $deleteKey =
 	document.querySelector<HTMLButtonElement>(".key--delete");
 

@@ -2,6 +2,10 @@ import * as elements from "./elements.ts";
 import * as handlers from "./handlers.ts";
 
 export function initEvents() {
+	document.addEventListener("DOMContentLoaded", () => {
+		handlers.loadThemeHandler();
+	});
+
 	document.addEventListener("keydown", e => {
 		handlers.keyboardHandler(e);
 	});

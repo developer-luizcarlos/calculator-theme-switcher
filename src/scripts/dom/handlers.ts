@@ -1,3 +1,5 @@
+import * as themeStorage from "../storage/theme.storage.ts";
+import * as body from "./body.ts";
 import * as keyboard from "./keyboard.ts";
 import * as keys from "./keys.ts";
 import * as screen from "./screen.ts";
@@ -62,4 +64,14 @@ export function keyboardHandler(e: KeyboardEvent): void {
 	} else if (isResetKey) {
 		screen.reset();
 	}
+}
+
+export function loadThemeHandler() {
+	const theme = themeStorage.getTheme();
+
+	if (!theme) {
+		themeStorage.saveTheme("dark");
+	}
+
+	body.setThemeClassName(theme);
 }

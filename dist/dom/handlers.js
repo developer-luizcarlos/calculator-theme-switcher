@@ -1,3 +1,5 @@
+import * as themeStorage from "../storage/theme.storage.js";
+import * as body from "./body.js";
 import * as keyboard from "./keyboard.js";
 import * as keys from "./keys.js";
 import * as screen from "./screen.js";
@@ -52,5 +54,12 @@ export function keyboardHandler(e) {
     else if (isResetKey) {
         screen.reset();
     }
+}
+export function loadThemeHandler() {
+    const theme = themeStorage.getTheme();
+    if (!theme) {
+        themeStorage.saveTheme("dark");
+    }
+    body.setThemeClassName(theme);
 }
 //# sourceMappingURL=handlers.js.map
