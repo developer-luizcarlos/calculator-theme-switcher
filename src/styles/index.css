@@ -44,7 +44,8 @@ body.purple-theme .thumb {
 }
 
 .calculator {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	row-gap: 20px;
 	width: clamp(350px, 60vw, 500px);
 }
@@ -114,7 +115,7 @@ body.purple-theme .thumb {
 	font-size: clamp(2.5rem, 3vw, 3rem);
 	font-weight: bold;
 	height: clamp(100px, 15vh, 200px);
-	padding: clamp(15px, 2rem, 30px);
+	padding: clamp(10px, 2rem, 30px);
 }
 
 .keypad {
@@ -122,7 +123,7 @@ body.purple-theme .thumb {
 	border-radius: 15px;
 	display: grid;
 	row-gap: 25px;
-	padding: clamp(15px, 2rem, 30px);
+	padding: clamp(10px, 2rem, 30px);
 }
 
 .action-keys-container {
@@ -139,13 +140,13 @@ body.purple-theme .thumb {
 
 .key {
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: clamp(1rem, 2.5vw, 2rem);
+	font-size: clamp(1.7rem, 2.5vw, 2rem);
 	font-weight: bold;
-	height: clamp(40px, 8vh, 60px);
-	width: max(60px, 100%);
+	height: clamp(65px, 8vh, 60px);
+	width: max(65px, 100%);
 }
 
 .key--regular {
