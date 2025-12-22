@@ -62,6 +62,15 @@ export function keyboardHandler(e: KeyboardEvent): void {
 	} else if (isDeleteKey) {
 		screen.deleteLastDigit();
 	} else if (isResultKey) {
+		/* 
+      stop the addition of a key
+      which may be focused when
+      the enter button is pressed,
+      a behavior that is the same as
+      clicking on the button.
+    */
+		e.preventDefault();
+
 		screen.displayResult();
 	} else if (isResetKey) {
 		screen.reset();
