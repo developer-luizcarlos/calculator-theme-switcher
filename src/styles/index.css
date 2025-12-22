@@ -107,7 +107,7 @@ body.purple-theme .thumb {
 
 .screen {
 	background-color: var(--bg-screen);
-	border-radius: 15px;
+	border-radius: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: end;
@@ -120,7 +120,7 @@ body.purple-theme .thumb {
 
 .keypad {
 	background-color: var(--bg-keypad);
-	border-radius: 15px;
+	border-radius: 10px;
 	display: grid;
 	row-gap: 25px;
 	padding: clamp(10px, 2rem, 30px);
@@ -144,7 +144,7 @@ body.purple-theme .thumb {
 	font-family: inherit;
 	font-size: clamp(1.7rem, 2.5vw, 2rem);
 	font-weight: bold;
-	height: clamp(65px, 8vh, 60px);
+	height: clamp(50px, 8vh, 60px);
 	width: max(65px, 100%);
 }
 
