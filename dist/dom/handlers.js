@@ -1,8 +1,10 @@
+import * as helpers from "../helpers/helpers.js";
 import * as themeStorage from "../storage/theme.storage.js";
 import * as body from "./body.js";
 import * as keyboard from "./keyboard.js";
 import * as keys from "./keys.js";
 import * as screen from "./screen.js";
+import * as toggle from "./toggle.js";
 export function deleteKeyHandler() {
     screen.deleteLastDigit();
 }
@@ -60,6 +62,16 @@ export function loadThemeHandler() {
     if (!theme) {
         themeStorage.saveTheme("dark");
     }
+    body.setThemeClassName(theme);
+}
+export function toggleHandler(e) {
+    const clickedArea = toggle.getClickedArea(e);
+    const currentTheme = themeStorage.getTheme();
+    const theme = helpers.getThemeBasedOnClickedArea(clickedArea);
+    if (currentTheme === theme) {
+        return;
+    }
+    themeStorage.saveTheme(theme);
     body.setThemeClassName(theme);
 }
 //# sourceMappingURL=handlers.js.map

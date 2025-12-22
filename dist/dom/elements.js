@@ -5,4 +5,6 @@ export const $regularKeys = document.querySelectorAll(".key--regular");
 export const $resetKey = document.querySelector(".key--reset");
 export const $resultKey = document.querySelector(".key--result");
 export const $screen = document.querySelector(".screen");
+export const $thumb = document.querySelector(".thumb");
+export const $toggle = document.querySelector(".toggle");
 //# sourceMappingURL=elements.js.map

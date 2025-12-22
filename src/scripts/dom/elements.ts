@@ -16,3 +16,6 @@ export const $resultKey =
 	document.querySelector<HTMLButtonElement>(".key--result");
 
 export const $screen = document.querySelector(".screen");
+
+export const $thumb = document.querySelector<HTMLElement>(".thumb");
+export const $toggle = document.querySelector<HTMLElement>(".toggle");

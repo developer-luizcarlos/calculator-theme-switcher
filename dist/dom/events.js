@@ -26,5 +26,8 @@ export function initEvents() {
     elements.$resultKey.addEventListener("click", () => {
         handlers.resultKeyHandler();
     });
+    elements.$toggle.addEventListener("click", (e) => {
+        handlers.toggleHandler(e);
+    });
 }
 //# sourceMappingURL=events.js.map
