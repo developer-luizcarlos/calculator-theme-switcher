@@ -3,6 +3,9 @@ export const $body = document.body as HTMLBodyElement;
 export const $deleteKey =
 	document.querySelector<HTMLButtonElement>(".key--delete");
 
+export const $labels =
+	document.querySelectorAll<HTMLLabelElement>(".label");
+
 export const $operatorKeys =
 	document.querySelectorAll<HTMLButtonElement>(".key--operator");
 

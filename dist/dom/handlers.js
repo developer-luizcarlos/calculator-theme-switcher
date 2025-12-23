@@ -8,6 +8,17 @@ import * as toggle from "./toggle.js";
 export function deleteKeyHandler() {
     screen.deleteLastDigit();
 }
+export function labelHandler(label) {
+    const className = label.className;
+    const themeRegex = /light|dark|purple/;
+    const currentTheme = themeStorage.getTheme();
+    const theme = className.match(themeRegex)?.[0];
+    if (currentTheme === theme) {
+        return;
+    }
+    themeStorage.saveTheme(theme);
+    body.setThemeClassName(theme);
+}
 export function operatorKeyHandler(operatorKey) {
     const keyValue = keys.getKeyValue(operatorKey);
     screen.insertOperatorDigit(keyValue);

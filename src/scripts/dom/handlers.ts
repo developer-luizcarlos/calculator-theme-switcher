@@ -1,5 +1,6 @@
 import * as helpers from "../helpers/helpers.ts";
 import * as themeStorage from "../storage/theme.storage.ts";
+import type {Theme} from "../types/theme.types.ts";
 import * as body from "./body.ts";
 import * as keyboard from "./keyboard.ts";
 import * as keys from "./keys.ts";
@@ -8,6 +9,23 @@ import * as toggle from "./toggle.ts";
 
 export function deleteKeyHandler(): void {
 	screen.deleteLastDigit();
+}
+
+export function labelHandler(label: HTMLLabelElement) {
+	const className = label.className;
+
+	const themeRegex = /light|dark|purple/;
+
+	const currentTheme = themeStorage.getTheme();
+	const theme = className.match(themeRegex)?.[0] as Theme;
+
+	if (currentTheme === theme) {
+		return;
+	}
+
+	themeStorage.saveTheme(theme);
+
+	body.setThemeClassName(theme);
 }
 
 export function operatorKeyHandler(operatorKey: HTMLButtonElement): void {

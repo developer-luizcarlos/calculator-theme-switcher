@@ -10,6 +10,11 @@ export function initEvents() {
     elements.$deleteKey.addEventListener("click", () => {
         handlers.deleteKeyHandler();
     });
+    elements.$labels.forEach(label => {
+        label.addEventListener("click", () => {
+            handlers.labelHandler(label);
+        });
+    });
     elements.$operatorKeys.forEach(key => {
         key.addEventListener("click", () => {
             handlers.operatorKeyHandler(key);

@@ -1,5 +1,6 @@
 export const $body = document.body;
 export const $deleteKey = document.querySelector(".key--delete");
+export const $labels = document.querySelectorAll(".label");
 export const $operatorKeys = document.querySelectorAll(".key--operator");
 export const $regularKeys = document.querySelectorAll(".key--regular");
 export const $resetKey = document.querySelector(".key--reset");
