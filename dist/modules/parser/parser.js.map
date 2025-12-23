@@ -1,1 +1,0 @@
-{"version":3,"file":"parser.js","sourceRoot":"","sources":["../../../src/scripts/modules/parser/parser.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,iBAAiB,EAAC,MAAM,gCAAgC,CAAC;AAEjE;;;;;GAKG;AACH,MAAM,UAAU,MAAM,CAAC,UAAkB;IACxC,MAAM,OAAO,GAAG,iBAAiB,CAAC,UAAU,CAAC,CAAC;IAE9C,IAAI,CAAC,OAAO,EAAE,CAAC;QACd,OAAO,UAAU,CAAC;IACnB,CAAC;IAED,OAAO,IAAI,CAAC,UAAU,CAAC,CAAC;AACzB,CAAC"}

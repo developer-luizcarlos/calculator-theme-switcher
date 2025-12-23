@@ -2,15 +2,22 @@
   "author": "Luiz Carlos Lima",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "babel-loader": "^10.0.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
   },
   "keywords": [],
   "license": "ISC",
-  "main": "dist/index.js",
   "name": "calculator-app",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -- --watch"
   },
   "type": "module",
   "version": "1.0.0"

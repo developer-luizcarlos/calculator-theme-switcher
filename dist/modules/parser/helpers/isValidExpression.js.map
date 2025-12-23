@@ -1,1 +1,0 @@
-{"version":3,"file":"isValidExpression.js","sourceRoot":"","sources":["../../../../src/scripts/modules/parser/helpers/isValidExpression.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,sBAAsB,EAAC,MAAM,yBAAyB,CAAC;AAE/D;;;;;;;;;;;;;;GAcG;AACH,MAAM,UAAU,iBAAiB,CAAC,UAAkB;IACnD,OAAO,sBAAsB,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC;AAChD,CAAC"}
