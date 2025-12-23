@@ -23,10 +23,17 @@ export function deleteLastDigit() {
 export function displayResult() {
 	const expression = getScreenValue();
 
-	const evaluatedExpression = parser(expression);
+	let evaluatedExpression = parser(expression).toString();
 
 	if (evaluatedExpression === expression) {
 		return;
+	}
+
+	if (evaluatedExpression.length > SCREEN_VALUE_LENGTH_LIMIT) {
+		evaluatedExpression = evaluatedExpression.slice(
+			0,
+			SCREEN_VALUE_LENGTH_LIMIT,
+		);
 	}
 
 	setScreenValue(evaluatedExpression);
