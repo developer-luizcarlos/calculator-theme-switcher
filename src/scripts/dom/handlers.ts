@@ -51,11 +51,25 @@ export function resultKeyHandler() {
 export function keyboardHandler(e: KeyboardEvent): void {
 	const key = e.key;
 
+	const checkSpecialKeyWasPressed = keyboard.checkSpecialKeyWasPressed(e);
+
 	const isNumericKey = keyboard.isNumericKey(key);
 	const isOperatorKey = keyboard.isOperatorKey(key);
 	const isDeleteKey = keyboard.isDeleteKey(key);
 	const isResultKey = keyboard.isResultKey(key);
 	const isResetKey = keyboard.isResetKey(key);
+
+	/**
+	 * Stops, by example, inserting
+	 * a numeric digit on the calculator screen
+	 * while pressing the alt key and a
+	 * numeric key on the user keyboard when
+	 * the user is swapping between pages by
+	 * the usage of browser's shortcuts.
+	 */
+	if (checkSpecialKeyWasPressed) {
+		return;
+	}
 
 	const isInvalidKey =
 		!isNumericKey &&

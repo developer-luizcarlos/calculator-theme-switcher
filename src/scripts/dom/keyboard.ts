@@ -19,3 +19,14 @@ export function isResetKey(key: string): boolean {
 export function isResultKey(key: string): boolean {
 	return key === "=" || key.toLowerCase() === "enter";
 }
+
+/**
+ * Returns true if alt or ctrl keys
+ * were pressed while hiting another key.
+ * @param e a KeyboardEvent object.
+ */
+export function checkSpecialKeyWasPressed(e: KeyboardEvent): boolean {
+	const isSpecialKey = e.ctrlKey || e.altKey;
+
+	return isSpecialKey;
+}
