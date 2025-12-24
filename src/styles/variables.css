@@ -32,3 +32,117 @@
 	--shadow-reset-key: hsl(224, 28%, 35%);
 	--shadow-result-key: hsl(6, 70%, 34%);
 }
+
+body.dark-theme {
+	--bg-body: hsl(222, 26%, 31%);
+	--bg-delete-key: hsl(225, 21%, 49%);
+	--bg-keypad: hsl(223, 31%, 20%);
+	--bg-operator-key: hsl(0, 0%, 90%);
+	--bg-regular-key: hsl(0, 0%, 90%);
+	--bg-reset-key: hsl(225, 21%, 49%);
+	--bg-result-key: hsl(6, 63%, 50%);
+	--bg-screen: hsl(224, 36%, 15%);
+	--bg-thumb: hsl(6, 63%, 50%);
+	--bg-toggle: hsl(223, 31%, 20%);
+
+	--color-app-title: hsl(0, 100%, 100%);
+	--color-delete-key: hsl(0, 100%, 100%);
+	--color-label: hsl(0, 100%, 100%);
+	--color-operator-key: hsl(221, 14%, 31%);
+	--color-regular-key: hsl(221, 14%, 31%);
+	--color-reset-key: hsl(0, 100%, 100%);
+	--color-result-key: hsl(0, 100%, 100%);
+	--color-screen: hsl(0, 100%, 100%);
+	--color-theme-container-title: hsl(0, 100%, 100%);
+
+	--font: "League Spartan", sans-serif;
+
+	--highlight-delete-key: hsl(223, 38%, 71%);
+	--highlight-operator-key: hsl(20, 23%, 97%);
+	--highlight-regular-key: hsl(20, 23%, 97%);
+	--highlight-reset-key: hsl(223, 38%, 71%);
+	--highlight-result-key: hsl(0, 86%, 65%);
+	--highlight-thumb: hsl(0, 86%, 65%);
+
+	--shadow-delete-key: hsl(224, 28%, 35%);
+	--shadow-operator-key: hsl(28, 16%, 65%);
+	--shadow-regular-key: hsl(28, 16%, 65%);
+	--shadow-reset-key: hsl(224, 28%, 35%);
+	--shadow-result-key: hsl(6, 70%, 34%);
+}
+
+body.light-theme {
+	--bg-body: hsl(0, 0%, 90%);
+	--bg-delete-key: hsl(185, 42%, 37%);
+	--bg-keypad: hsl(0, 5%, 81%);
+	--bg-operator-key: hsl(0, 0%, 90%);
+	--bg-regular-key: hsl(0, 0%, 90%);
+	--bg-reset-key: hsl(185, 42%, 37%);
+	--bg-result-key: hsl(25, 98%, 40%);
+	--bg-screen: hsl(0, 0%, 93%);
+	--bg-thumb: hsl(25, 98%, 40%);
+	--bg-toggle: hsl(0, 5%, 81%);
+
+	--color-app-title: hsl(60, 10%, 19%);
+	--color-delete-key: hsl(0, 100%, 100%);
+	--color-label: hsl(60, 10%, 19%);
+	--color-operator-key: hsl(60, 10%, 19%);
+	--color-regular-key: hsl(60, 10%, 19%);
+	--color-reset-key: hsl(0, 100%, 100%);
+	--color-result-key: hsl(0, 100%, 100%);
+	--color-screen: hsl(60, 10%, 19%);
+	--color-theme-container-title: hsl(60, 10%, 19%);
+
+	--font: "League Spartan", sans-serif;
+
+	--highlight-delete-key: hsl(190, 58%, 43%);
+	--highlight-operator-key: hsl(20, 23%, 97%);
+	--highlight-regular-key: hsl(20, 23%, 97%);
+	--highlight-reset-key: hsl(190, 58%, 43%);
+	--highlight-result-key: hsl(25, 72%, 51%);
+	--highlight-thumb: hsl(25, 72%, 51%);
+
+	--shadow-delete-key: hsl(185, 58%, 25%);
+	--shadow-operator-key: hsl(35, 11%, 61%);
+	--shadow-regular-key: hsl(35, 11%, 61%);
+	--shadow-reset-key: hsl(185, 58%, 25%);
+	--shadow-result-key: hsl(25, 99%, 27%);
+}
+
+body.purple-theme {
+	--bg-body: hsl(268, 75%, 9%);
+	--bg-delete-key: hsl(281, 89%, 26%);
+	--bg-keypad: hsl(268, 71%, 12%);
+	--bg-operator-key: hsl(268, 47%, 21%);
+	--bg-regular-key: hsl(268, 47%, 21%);
+	--bg-reset-key: hsl(281, 89%, 26%);
+	--bg-result-key: hsl(176, 100%, 44%);
+	--bg-screen: hsl(268, 71%, 12%);
+	--bg-thumb: hsl(176, 100%, 44%);
+	--bg-toggle: hsl(268, 71%, 12%);
+
+	--color-app-title: hsl(52, 100%, 62%);
+	--color-delete-key: hsl(0, 100%, 100%);
+	--color-label: hsl(52, 100%, 62%);
+	--color-operator-key: hsl(52, 100%, 62%);
+	--color-regular-key: hsl(52, 100%, 62%);
+	--color-reset-key: hsl(0, 100%, 100%);
+	--color-result-key: hsl(198, 20%, 13%);
+	--color-screen: hsl(52, 100%, 62%);
+	--color-theme-container-title: hsl(52, 100%, 62%);
+
+	--font: "League Spartan", sans-serif;
+
+	--highlight-delete-key: hsl(297, 80%, 33%);
+	--highlight-operator-key: hsl(286, 71%, 52%);
+	--highlight-regular-key: hsl(286, 71%, 52%);
+	--highlight-reset-key: hsl(297, 80%, 33%);
+	--highlight-result-key: hsl(170, 92%, 66%);
+	--highlight-thumb: hsl(170, 92%, 66%);
+
+	--shadow-delete-key: hsl(285, 91%, 52%);
+	--shadow-operator-key: hsl(290, 70%, 36%);
+	--shadow-regular-key: hsl(290, 70%, 36%);
+	--shadow-reset-key: hsl(285, 91%, 52%);
+	--shadow-result-key: hsl(177, 92%, 70%);
+}

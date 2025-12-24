@@ -6,6 +6,10 @@
 }
 
 @media only screen and (hover: hover) and (prefers-reduced-motion: no-preference) {
+	body {
+		transition: background-color 0.05s ease;
+	}
+
 	.key {
 		cursor: pointer;
 		outline: none;
